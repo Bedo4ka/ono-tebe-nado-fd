@@ -31,7 +31,7 @@
 	height: 105px;
 }
 
-.header__links-list-item{
+.header__links-list-item {
 	text-decoration: none;
 }
 
@@ -178,10 +178,12 @@
 }
 
 .card__title {
+	
 	color: white;	
 	font-size: 22px;
 	font-weight: 700;
 	text-transform: uppercase;
+	
 	text-decoration: underline;
 	padding-top: 48px; 
 	padding-left: 40px; 
@@ -206,7 +208,8 @@
 		url(../images/card-lot-01.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: 50% 50%; 
+	background-position: 50% 50%;
+
 }
 
 .card_type_book {
@@ -215,7 +218,8 @@
 		url(../images/card-lot-02.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: 50% 50%; 
+	background-position: 50% 50%;
+
 }
 
 .card_type_picture {
