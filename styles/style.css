@@ -178,13 +178,13 @@
 }
 
 .card__title {
-  color: white;	
+ color: white;
 	font-size: 22px;
 	font-weight: 700;
 	text-transform: uppercase;
 	text-decoration: underline;
-  padding-top: 48px; 
-	padding-left: 40px; 
+ padding-top: 48px;
+	padding-left: 40px;
 	padding-right: 40px;
 }
 
@@ -194,9 +194,9 @@
   color: white;	
 	font-size: 20px;
 	font-weight: 400;
-  padding-left: 40px; 
+  padding-left: 40px;
 	padding-right: 40px;
-  padding-bottom: 48px; 
+  padding-bottom: 48px;
 	line-height: 120%;
 }
 
@@ -259,7 +259,7 @@
   	background-color: black;
 	text-align: center;
 	display: grid;
-  justify-content: center; 
+  justify-content: center;
 	align-content: center;
 	margin-left: 71px;
 	margin-right: 72px;
