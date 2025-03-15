@@ -13,7 +13,7 @@
 	font-size: 18px;
 }
 
-.header__menu{
+.header__menu {
 	position: relative;
 	text-transform: lowercase;
 	text-align: right;
@@ -87,18 +87,18 @@
 	letter-spacing: 30px;
 }
 
-.aligned-text_center{
+.aligned-text_center {
 	text-align: center;
 	padding-left: 30px;
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
 
-.aligned-text_right{
+.aligned-text_right {
 	text-align:right;
 }
 
-.no-letter-spacing{
+.no-letter-spacing {
 	letter-spacing: 0;
 }
 
@@ -223,7 +223,7 @@
 	background-position: 50% 50%;
 }
 
-.lots__look-more-link{
+.lots__look-more-link {
 	position: relative;
 	padding-top: 30px;
 	padding-left: 64px;
@@ -310,13 +310,13 @@
 	place-items: center;
 }
 
-.footer__social-list-item{
+.footer__social-list-item {
 	display: grid;
 	grid-template-columns: repeat(3, auto);
 	grid-template-rows: auto;
 	gap: 48px;
 }
 
-.footer__social-icon{
+.footer__social-icon {
 	height: 48px
 }
