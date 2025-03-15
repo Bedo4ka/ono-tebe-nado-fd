@@ -31,6 +31,10 @@
 	height: 105px;
 }
 
+.header__links-list-item{
+	text-decoration: none;
+}
+
 .address {
 	font-style: normal;
 	position: relative;
