@@ -19,11 +19,12 @@
 	text-align: right;
 	display: grid;
 	place-items:center;
-	grid-template-columns: repeat(5, auto);
+	grid-template-columns: repeat(3, auto);
 	grid-template-rows: auto;
-	gap: 14px;
-	padding-left: 20px;
+	gap:  45px;
+	padding-left: 18px;
 }
+
 
 .header__logo {
 	position: relative;
@@ -31,7 +32,13 @@
 	height: 105px;
 }
 
-.header__links-list-item {
+.link-active{
+	text-decoration: none;
+	list-style: none;
+}
+
+.links-list-item {
+	list-style-type: circle;
 	text-decoration: none;
 }
 
@@ -52,22 +59,23 @@
 	position: relative;
 	width: 1100px;
 	height: 756px;
+	min-height: 100px;
 	background-image: url(../images/cover.jpg);
 }
 
-.cover::before {
+.blackout::before {
 	content: '';
 	position: absolute;
-	top: 0;
-	left: 0;
+	inset: 0;
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.6);
 }
 
+
 .cover-container {
 	position: relative;
-	padding: 50px;
+	padding: 61px;
 	width: 100%;
 	height: 100%;
 }
@@ -77,7 +85,6 @@
 	display: grid;
 	align-items: center;
 	grid-template-columns: auto;
-	grid-template-rows: auto 50px;
 	width: 100%;
 	height: 100%;
 }
@@ -89,17 +96,19 @@
 	font-size: 100px;
 	text-transform: uppercase;
 	letter-spacing: 30px;
+	padding-top: 100px;
 }
 
 .aligned-text_center {
 	text-align: center;
 	padding-left: 30px;
-	padding-top: 20px;
+	padding-top: 13px;
 	padding-bottom: 20px;
 }
 
 .aligned-text_right {
 	text-align:right;
+	padding-left: 600px;
 }
 
 .no-letter-spacing {
@@ -110,8 +119,8 @@
 	color: white;
 	display: grid;
 	grid-template-columns: 638px 256px;
-	grid-template-rows: 51px;
 	justify-content: space-between;
+	padding-top: 110px;
 
 }
 
@@ -122,7 +131,7 @@
 	text-transform: uppercase;
 	text-align-last: justify;
 	line-height: 28px;
-	align-content: center;
+	align-content: end;
 
 }
 
@@ -134,7 +143,7 @@
 	font-size: 22px;
 	text-transform: uppercase;
 	padding: 10px 30px;
-	align-content: center;
+	align-content: end;
 }
 
 .bet-button:hover {
@@ -147,7 +156,7 @@
 
 .lots {
 	position: relative;
-	padding-top: 180px;
+	padding-top: 170px;
 	width: 100%;
 	height: 100%;
 	list-style-type: none;
@@ -157,7 +166,7 @@
 	font-size: 40px;
 	font-weight: 700;
 	text-transform: uppercase;
-	padding-bottom: 28px;
+	padding-bottom: 18px;
 	padding-left: 64px;
 }
 
@@ -173,50 +182,47 @@
 
 .card {
 	position: relative;
-	height: 596px;
-	width: 334px;
+	min-height: 107%;
+	min-width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	list-style: none;
+	
 }
 
 .card__title {
- color: white;
+    color: white;
 	font-size: 22px;
 	font-weight: 700;
 	text-transform: uppercase;
 	text-decoration: underline;
- padding-top: 48px;
+    padding-top: 55px;
 	padding-left: 40px;
 	padding-right: 40px;
 }
 
 .card__text {
-	position: absolute;
 	bottom: 0;
-  color: white;
+  	color: white;
 	font-size: 20px;
 	font-weight: 400;
-  padding-left: 40px;
+  	padding-left: 40px;
 	padding-right: 40px;
-  padding-bottom: 48px;
+  	padding-bottom: 48px;
 	line-height: 120%;
 }
 
 .card_type_film {
 	background: 
-		linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-		url(../images/card-lot-01.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
-
+	linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+	url(../images/card-lot-01.jpg);
 }
 
 .card_type_book {
 	background: 
 		linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
 		url(../images/card-lot-02.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
 
 }
 
@@ -224,15 +230,12 @@
 	background: 
 		linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
 		url(../images/card-lot-03.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
 }
 
 .lots__look-more-link {
 	position: relative;
-	padding-top: 30px;
-	padding-left: 64px;
+	padding-top: 45px;
+	padding-left: 40px;
 	color: black;
 	font-size: 20px;
 	font-weight: 400;
@@ -281,6 +284,9 @@
 }
 
 .about__text {
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
 	margin-top: 10px;
 	margin-right: 28px;
 	font-size: 20px;
@@ -300,7 +306,6 @@
 	font-size: 18px;
 	font-weight: 400;
 	line-height: 24px;
-	padding-left: 50px;
 	padding-right: 50px;
 }
 
@@ -314,6 +319,11 @@
 	grid-template-columns: auto;
 	grid-template-rows: repeat(3, 1fr);
 	place-items: center;
+}
+
+.footer_list{
+ list-style: none;
+ text-align: center;
 }
 
 .footer__social-list-item {
