@@ -32,7 +32,7 @@
 	height: 105px;
 }
 
-.link-active{
+.link-active {
 	text-decoration: none;
 	list-style: none;
 }
@@ -321,7 +321,7 @@
 	place-items: center;
 }
 
-.footer_list{
+.footer_list {
  list-style: none;
  text-align: center;
 }
