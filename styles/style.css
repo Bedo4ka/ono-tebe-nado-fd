@@ -307,7 +307,7 @@
 	font-weight: 400;
 	line-height: 24px;
 	padding-right: 50px;
-	padding-top: 55px;
+	padding-top: 45px;
 
 }
 
@@ -318,7 +318,7 @@
 	font-size: 18px;
 	text-transform: lowercase;
 	place-items: center;
-	margin-bottom: 40px;
+	margin-bottom: 55px;
 }
 
 .footer_list {
@@ -331,7 +331,7 @@
 	grid-template-columns: repeat(3, auto);
 	grid-template-rows: auto;
 	gap: 48px;
-	padding-bottom: 55px;
+	padding-bottom: 50px;
 }
 
 .footer__social-icon {
