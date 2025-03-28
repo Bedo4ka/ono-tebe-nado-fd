@@ -284,7 +284,7 @@ z-index: 1;
 	padding-bottom: 24px;
 }
 
-.about_text_bootom {
+.about_text_bootom{
 margin-top: 0;
 margin-bottom: 135px;
 }
@@ -301,7 +301,6 @@ margin-bottom: 135px;
 	line-height: 24px;
 	padding-right: 50px;
 	padding-top: 25px;
-  padding-bottom: 85px;
 
 }
 
@@ -312,6 +311,7 @@ margin-bottom: 135px;
 	font-size: 18px;
 	text-transform: lowercase;
 	place-items: center;
+	padding-bottom:85px;
 }
 
 .footer_list {
