@@ -1,6 +1,6 @@
 .header {
 	padding-top: 86px;
-	padding-bottom: 96px;
+	padding-bottom: 92px;
 	padding-left: 18px;
 	position: relative;
 	display: grid;
@@ -22,7 +22,7 @@
 	grid-template-columns: repeat(3, auto);
 	grid-template-rows: auto;
 	gap:  34px;
-	padding-left: 18px;
+	padding-left: 20px;
 }
 
 
@@ -71,7 +71,7 @@
 
 .cover-container {
 	position: relative;
-	padding: 55px;
+	padding: 50px;
 	width: 100%;
 	height: 100%;
 }
@@ -92,7 +92,7 @@
 	font-size: 100px;
 	text-transform: uppercase;
 	letter-spacing: 30px;
-	padding-top: 100px;
+	padding-top: 110px;
 	z-index: 1;
 }
 
@@ -206,7 +206,7 @@ z-index: 1;
   	padding-left: 40px;
 	padding-right: 40px;
   	padding-bottom: 50px;
-	padding-top: 5px;
+	padding-top: 35px;
 	line-height: 120%;
 	z-index: 1;
 }
@@ -238,7 +238,7 @@ z-index: 1;
 
 .about {
 	position: relative;
-	padding-top: 151px;
+	padding-top: 155px;
 	width: 100%;
 	height: 100%;
 	display: grid;
@@ -286,7 +286,7 @@ z-index: 1;
 
 .about_text_bootom{
 margin-top: 0;
-margin-bottom: 135px;
+margin-bottom: 130px;
 }
 
 .footer {
