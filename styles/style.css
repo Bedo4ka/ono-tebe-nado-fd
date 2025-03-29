@@ -1,5 +1,5 @@
 .header {
-	padding-top: 86px;
+	padding-top: 90px;
 	padding-bottom: 92px;
 	padding-left: 18px;
 	position: relative;
@@ -284,7 +284,7 @@ z-index: 1;
 	padding-bottom: 24px;
 }
 
-.about_text_bootom{
+.about_text_bootom {
 margin-top: 0;
 margin-bottom: 130px;
 }
