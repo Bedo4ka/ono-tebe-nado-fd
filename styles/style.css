@@ -362,8 +362,8 @@
 .about__text {
 	/* Отступы */
 	padding-bottom: 24px;
-	margin-right: 27px;
-	
+  margin-right: 27px;
+  
 	/* Шрифт */	
 	font-size: 20px;
 	font-weight: 400;
