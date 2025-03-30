@@ -1,61 +1,79 @@
+/* ============================== ШАПКА ============================== */
+/* Шапка */
 .header {
-	padding-top: 90px;
-	padding-bottom: 92px;
-	padding-left: 18px;
-	position: relative;
+	/* Отступы */
+  padding: 92px 50px 92px;
+
+	/* Grid-контейнер */
 	display: grid;
-	place-items:center;
-	grid-template-columns: 2fr 1fr 2fr;
-	grid-template-rows: auto;
+	grid-template-columns: 1fr min-content 1fr;
+	align-items: center;
+
+	/* Общий шрифт */
 	color: black;
 	font-style: normal;
-	font-weight: 400;
 	font-size: 18px;
+	font-weight: 400;
+	text-underline-position: under;
 }
 
+/* Меню в шапке - список */
 .header__menu {
-	position: relative;
-	text-transform: lowercase;
-	text-align: right;
-	display: grid;
-	place-items:center;
-	grid-template-columns: repeat(3, auto);
-	grid-template-rows: auto;
-	gap:  34px;
-	padding-left: 20px;
+	/* Дополнительное выравнивание по высоте от центра */
+	padding-bottom: 4px;
+
+	/* Flex-box */
+	display: flex;
+	gap: 34px;
+
+	/* Общий стиль для элементов списка */
+	list-style: circle;
 }
 
-
-.header__logo {
-	position: relative;
-	padding-right: 15px;
-	height: 105px;
+/* Отсутствие кружочка */
+.header__links-list-item_no-bullit {
+	list-style: none;
 }
 
-.links-list-item {
-	list-style-type: circle;
+/* Отсутствие подчеркивания у ссылки */
+.link_active {
 	text-decoration: none;
 }
 
-.link-active {
-	list-style-type: none;
+/* Логотип в шапке */
+.header__logo {
+	width: 148px; 
+	height: 105px;
 }
 
+/* Контакты */
 .address {
-	font-style: normal;
 	position: relative;
-	padding-left: 55px;
+	max-width: 240px;
 	line-height: 24px;
 }
 
+/* Уточнение позиционирования контактов в шапке */
+.header__address {
+	/* Дополнительное выравнивание по высоте от центра */
+	padding-bottom: 4px;
+
+	/* Прижим к правому краю */
+	justify-self: end;
+}
+/* ============================= ШАПКА ============================== */
+
+
+
+/* ============================== ОБЛОЖКА ============================== */
+/* Обложка */
 .cover {
 	position: relative;
-	width: 1100px;
-	min-height: 100px;
 	background-image: url(../images/cover.jpg);
-	background-size:cover;
+	background-size: cover;
 }
 
+/* Затемнение */
 .blackout::before {
 	content: '';
 	position: absolute;
@@ -68,42 +86,50 @@
 	z-index:0;
 }
 
-
+/* Контейнер обложки (нужен для того, чтобы был элемент на уровень выше затемняемого)*/
 .cover-container {
+	/* Размер в размер cover */
 	position: relative;
+	width: 100%;
+	height: 100%;
+	
+	/* Отступы */
 	padding: 50px;
-	width: 100%;
-	height: 100%;
 }
 
-.overlay {
-	position: relative;
-	display: grid;
-	align-items: center;
-	grid-template-columns: auto;
-	width: 100%;
-	height: 100%;
-}
-
+/* Заголовок обложки */
 .cover__title {
+	/* Отступы */
+	padding-top: 115px;
+	padding-bottom: 106px;
+
+	/* Общий шрифт */
 	color: white;
 	font-style: normal;
-	font-weight: 700;
 	font-size: 100px;
-	text-transform: uppercase;
+	font-weight: 700;
+	line-height: 115%;
 	letter-spacing: 30px;
-	padding-top: 110px;
-	z-index: 1;
+	text-transform: uppercase;
 }
 
-.aligned-text_center {
-	text-align: center;
-	padding-left: 30px;
-	padding-top: 18px;
+/* Часть текста без выравнивания */
+.aligned-text_left {
+	display: block; /* Делаем элемент блочным */
 	padding-bottom: 20px;
 }
 
+/* Часть текста с выравниванием по центру */
+.aligned-text_center {
+	display: block; /* Делаем элемент блочным */
+	text-align: center;
+	padding-left: 30px;
+	padding-bottom: 20px;
+}
+
+/* Часть текста с выравниванием по правому краю */
 .aligned-text_right {
+	display: block; /* Делаем элемент блочным */
 	text-align:right;
 }
 
@@ -111,221 +137,290 @@
 	letter-spacing: 0;
 }
 
-.description {
-	color: white;
+/* Описание обложки */
+.cover__description {
+	/* Grid- контейнер */
 	display: grid;
-	grid-template-columns: 638px 256px;
+	grid-template-columns: 638px auto;
 	justify-content: space-between;
-	padding-top: 110px;
-z-index: 1;
+	align-items: center;
 }
 
+/* Текст описания обложки */
 .cover__description-text {
 	color: white;
 	font-style: normal;
 	font-size: 22px;
-	text-transform: uppercase;
-	text-align-last: justify;
 	line-height: 28px;
-	align-content: end;
-
+	text-transform: uppercase;
+	text-align-last: justify; /* word-spacing не подходит, т.к. немного не так работает */
 }
 
+/* Кнопка "Сделать ставку" */
 .bet-button {
+	/* Фигура */
 	border: 1px solid white;
 	background: transparent;
+
+	/* Отступы */
+	padding: 12px 31px 11px 32px;
+
+	/* Шрифт */
 	color: white;
 	font-style: normal;
 	font-size: 22px;
 	text-transform: uppercase;
-	padding: 10px 30px;
-	align-content: end;
 }
 
+/* При наведении курсора на кнопку */
 .bet-button:hover {
 	background: darkgray;
 }
 
+/* При нажатии на кнопку */
 .bet-button:active {
 	background: gray;
 }
+/* ============================== ОБЛОЖКА ============================= */
 
+
+
+/* ============================== ЛОТЫ ============================== */
+/* Лоты */
 .lots {
-	position: relative;
+	/* Отступы */
 	padding-top: 180px;
-	width: 100%;
-	height: 100%;
-	list-style-type: none;
 }
 
+/* Заголовок "Лоты" */
 .lots__heading {
+	/* Отступы */
+	padding-left: 64px; 
+	
+	/* Шрифт */
 	font-size: 40px;
 	font-weight: 700;
 	text-transform: uppercase;
-	padding-bottom: 25px;
-	padding-left: 64px;
 }
 
+/* Список лотов */
 .lots__card-list {
-	position: relative;
+	/* Отступы */
+	padding: 27px 24px 30px;
+
+	/* Grid-контейнер */
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: auto;
 	gap: 25px;
-	padding-left: 25px;
-	padding-right: 25px;
-}
-
-.card {
-	position: relative;
-	min-height: 596px;
-	min-width: 100px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+	
+	/* Общий стиль списка */
 	list-style: none;
 }
 
+/* Item списка */
+.lots__card-list-item {
+	width: 334px;
+	min-height: 597px;
+}
+
+/* Ссылка на лот */
+.card-link {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+/* Карточка лота */
+.card {
+	/* Размеры и положение */
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+/* Контейнер карточки лота (нужен для того, чтобы был элемент на уровень выше затемняемого)*/
+.card-container {
+	/* Размеры и положение */
+	position: relative;
+	width: 100%;
+	height: 100%;
+
+	/* Отступы */
+	padding: 48px 40px;
+
+	/* Flex-box */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+/* Заголовок карточки лота */
 .card__title {
-    color: white;
+  color: white;
+	font-style: normal;
 	font-size: 22px;
 	font-weight: 700;
 	text-transform: uppercase;
 	text-decoration: underline;
-    padding-top: 50px;
-	padding-left: 40px;
-	padding-right: 40px;
-	z-index:1;
 }
 
+/* Текст карточки лота */
 .card__text {
-	bottom: 0;
-  	color: white;
+  color: white;
+	font-style: normal;
 	font-size: 20px;
 	font-weight: 400;
-  	padding-left: 40px;
-	padding-right: 40px;
-  	padding-bottom: 50px;
-	padding-top: 35px;
 	line-height: 120%;
-	z-index: 1;
 }
 
+/* Фон карточки про фильм */ 
 .card_type_film {
 	background: url(../images/card-lot-01.jpg);
 }
 
+/* Фон карточки про книгу */ 
 .card_type_book {
 	background: url(../images/card-lot-02.jpg);
 
 }
 
+/* Фон карточки про картину */ 
 .card_type_picture {
 	background: url(../images/card-lot-03.jpg);
 }
 
+/* Ссылка на другие лоты */ 
 .lots__look-more-link {
-	position: relative;
-	padding-top: 30px;
-	padding-left: 65px;
+	/* Оступы */
+	padding-left: 64px; 
+
+	/* Шрифт */
 	color: black;
+	font-style: normal;
 	font-size: 20px;
 	font-weight: 400;
 	text-transform: lowercase;
 	text-decoration: underline;
-	z-index: 2;
+	text-underline-position: under;
 }
+/* ============================== ЛОТЫ ============================== */
 
+
+
+/* ============================== ОБ АУКЦИОНЕ ============================== */
+/* Об аукционе */
 .about {
-	position: relative;
-	padding-top: 155px;
-	width: 100%;
-	height: 100%;
+	/* Отступы */
+	padding-top: 153px; /* 155px по Figma*/
+
+	/* Grid-контейнер */
 	display: grid;
 	grid-template-columns: 1fr 2fr;
-	justify-content: start;
-	align-content: start;
 }
 
+/* Логотип на черном фоне */
 .about__logo {
+	/* Размер */
 	width: 240px;
   height: 240px;
+
+	/* Закругление */
   border-radius: 50%;
+
+	/* Фон */
   background-color: black;
-	text-align: center;
+
+	/* Flex-box для выравнивания */
 	display: flex;
   justify-content: center;
 	align-items: center;
+
+	/* Отсупы grid-контейнере */
 	margin-left: 71px;
 	margin-right: 72px;
 }
 
+/* Белый логотип */
 .about__logo-image {
-	width: 148px;
+	width: 148px; /*148px x 114 px*/
 }
 
+/* Заголовок "Об аукционе" */
 .about__title {
+	/* Отступы */
 	padding-top: 100px;
+	padding-bottom: 100px;
+
+	/* Шрифт */
 	font-size: 40px;
 	font-weight: 700;
 	text-transform: uppercase;
-	justify-self: start;
-	align-self: center;
 }
 
+/* Текст "Об аукционе" */
 .about__text {
-	display: flex;
-	flex-direction: column;
-	margin-top: 100px;
-	margin-right: 28px;
+	/* Отступы */
+	padding-bottom: 24px;
+	margin-right: 27px;
+
+	/* Шрифт */	
 	font-size: 20px;
 	font-weight: 400;
 	line-height: 24px;
-	padding-bottom: 24px;
+	
 }
 
+/* Сброс отступа во втором абзаце */
 .about_text_bootom {
-margin-top: 0;
-margin-bottom: 130px;
+  padding-bottom: 0px;
 }
+/* ============================== ОБ АУКЦИОНЕ ============================== */
 
+
+
+/* ============================== ПОДВАЛ ============================== */
+/* "Подвал" */
 .footer {
-	position: relative;
-	display: grid;
-	grid-template-columns: auto auto auto;
-	grid-template-rows: auto;
-	align-items: start;
-	justify-content: space-between;
+	/* Отсупы */
+	padding: 181px 50px 82px; /* 180 50 82 50 по Figma*/
+	
+	/* Общий шрифт */
+	font-style: normal;
 	font-size: 18px;
 	font-weight: 400;
-	line-height: 24px;
-	padding-right: 50px;
-	padding-top: 25px;
-
+	text-underline-position: under;
+	
+	/* Grid-контейнер */
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+	justify-content: space-between;
 }
 
+/* Меню в "подвале" */
 .footer__menu {
-	position: relative;
 	color: black;
 	font-style: normal;
 	font-size: 18px;
 	text-transform: lowercase;
-	place-items: center;
-	padding-bottom:85px;
 }
 
+/* Стилизация item'а списка в "подвале"*/
 .footer_list {
- list-style: none;
- text-align: center;
+	list-style: none;
+	text-align: center;
 }
 
+/* Список соц. сетей */
 .footer__social-list-item {
+	/* Grid-контейнер */
 	display: grid;
 	grid-template-columns: repeat(3, auto);
-	grid-template-rows: auto;
 	gap: 48px;
 }
 
+/* Иконка соц. сети*/
 .footer__social-icon {
-	height: 48px
+	height: 48px; /* 48x48 */
 }
+/* ============================== ПОДВАЛ ============================== */
