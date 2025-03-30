@@ -42,7 +42,7 @@
 
 /* Логотип в шапке */
 .header__logo {
-	width: 148px; 
+	width: 148px;
 	height: 105px;
 }
 
@@ -363,7 +363,7 @@
 	/* Отступы */
 	padding-bottom: 24px;
 	margin-right: 27px;
-
+	
 	/* Шрифт */	
 	font-size: 20px;
 	font-weight: 400;
